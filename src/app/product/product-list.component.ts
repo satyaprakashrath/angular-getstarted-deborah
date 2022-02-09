@@ -1,10 +1,15 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
-
+import { ProductService } from "./product.service";
+/*Component injector, used for registering the service with
+the component only, so the service is available only to that
+component and its child (nested) component
+*/
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html',
-    styleUrls : ['./product-list.css']
+    styleUrls : ['./product-list.css'],
+    providers: [ProductService]
 })
 export class ProductListComponent implements OnInit {
     pageTitle : String = 'Product List;'
