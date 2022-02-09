@@ -1,7 +1,12 @@
 import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
 
-@Injectable()
+/*Recommended way of registering service after angular 6
+* earlier it was registered in app.module.ts
+*/
+@Injectable({
+    providedIn: 'root'
+})
 export class ProductService {
 
     getProducts() : IProduct[] {
