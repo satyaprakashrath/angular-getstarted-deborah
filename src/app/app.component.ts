@@ -5,10 +5,14 @@ import { Component } from '@angular/core';
   template: `<nav class="navbar navbar-expand navbar-light bg-light">
     <a class="navbar brand">{{pageTitle}}</a>
     <ul class="nav nav-pills">
-      <li><a class="nav-link">Home</a></li>
-      <li><a class="nav-link">Products</a></li>
+      <li><a class="nav-link" [routerLink]="['/welcome']">Home</a></li>
+      <li><a class="nav-link" [routerLink]="['/product']">Products</a></li>
     </ul>
-  </nav>`,
+  </nav>
+  <div class="conatiner">
+    <router-outlet></router-outlet>
+  </div>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
