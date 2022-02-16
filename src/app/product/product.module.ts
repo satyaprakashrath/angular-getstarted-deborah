@@ -7,6 +7,7 @@ import { StarComponent } from '../shared/star.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-detail.guard';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -23,7 +24,8 @@ import { ProductDetailGuard } from './product-detail.guard';
     RouterModule.forChild(
       [{path: 'product', component: ProductListComponent},
       {path: 'product/:id', canActivate: [ProductDetailGuard],component: ProductDetailComponent}]
-    )
+    ),
+    SharedModule
   ]
 })
 export class ProductModule { }
