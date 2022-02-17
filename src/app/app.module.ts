@@ -6,8 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
-import { ProductDetailGuard } from './product/product-detail.guard';
 import { ProductModule } from './product/product.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
